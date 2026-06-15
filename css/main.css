@@ -1,0 +1,23 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+.first{
+    background-color: #6a6dc7;
+    height: 300px;
+    width: 200px;
+    border: 5px solid black;
+    padding: 10px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.second{
+    background-color: #da4949;
+    height: 300px;
+    width: 200px;
+    border: 5px solid black;
+    padding: 10px;
+    margin: 20px auto;
+    text-align: center;
+}
