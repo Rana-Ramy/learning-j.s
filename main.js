@@ -128,22 +128,22 @@
 // }   
 
 // Coding Challenge 2:
-// let scoreJohn = (89 + 120 + 103) / 3 ;
-// let scoreMike = (116 + 94 + 123) / 3 ;
-// let scoreMary = (97 + 134 + 105) / 3; 
+let scoreJohn = (89 + 120 + 103) / 3 ;
+let scoreMike = (116 + 94 + 123) / 3 ;
+let scoreMary = (97 + 134 + 105) / 3; 
 
-// if (scoreJohn > scoreMike && scoreJohn > scoreMary) {
-//     console.log ("John's team is the winner with an average score of " + scoreJohn);
-// }
-// else if (scoreMike > scoreJohn && scoreMike > scoreMary) {
-//     console.log ("Mike's team is the winner with an average score of " + scoreMike);
-// }
-// else if (scoreMary > scoreJohn && scoreMary > scoreMike) {
-//     console.log ("Mary's team is the winner with an average score of " + scoreMary);
-// }
-// else {
-//     console.log ("It's a draw");
-// }
+if (scoreJohn > scoreMike && scoreJohn > scoreMary) {
+    console.log ("John's team is the winner with an average score of " + scoreJohn);
+}
+else if (scoreMike > scoreJohn && scoreMike > scoreMary) {
+    console.log ("Mike's team is the winner with an average score of " + scoreMike);
+}
+else if (scoreMary > scoreJohn && scoreMary > scoreMike) {
+    console.log ("Mary's team is the winner with an average score of " + scoreMary);
+}
+else {
+    console.log ("It's a draw");
+}
 
 /////////////////////////////////////////////////////////////////////////
 
