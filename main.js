@@ -147,25 +147,82 @@
 
 /////////////////////////////////////////////////////////////////////////
 
-// function showInfo (user = "Un", age = "Un", rate = 0, show = "yes", ...skills){
-//     document.write(`<div>`);
-//     document.write('Welcome, ${user}')
-//     document.write('</div>');
 
+// let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
+
+// for (let i = 1; i <= answer; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//         console.log("FizzBuzz");
+//     } else if (i % 3 === 0) {
+//         console.log("Fizz");
+//     } else if (i % 5 === 0) {
+//         console.log("Buzz");
+//     } else {
+//         console.log(i);
+//     }
 // }
 
-// showInfo(); ??????
+///////////////////////////////////////////////////
 
-let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
-
-for (let i = 1; i <= answer; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-        console.log("FizzBuzz");
-    } else if (i % 3 === 0) {
-        console.log("Fizz");
-    } else if (i % 5 === 0) {
-        console.log("Buzz");
+function showInfo (user = "Un", age = "Un", rate = 0, show = "no", ...skills){
+    document.write(`<div>`);
+    document.write(`<h2>Welcome, ${user}</h2>`);
+    document.write(`<P>Age: ${age}</P>`);
+    document.write(`<p>Hour Rate: $${rate}</p>`)
+    document.write('</div>');
+    if (show === "yes"){
+        if (skills.length > 0) {
+            document.write(`<P>skills: ${skills.join(" | ")}</P>`);
+        } else {
+            document.write(`<P>skills: no skills</P>`);
+        }
     } else {
-        console.log(i);
+        document.write(`<P>skills is hidden</P>`);
     }
 }
+
+showInfo("Rana", 17, 20, "yes", "HTML", "CSS");
+
+//??????
+
+//////////////////////////////////////////////////////////////
+
+function showDetails(a, b, c) {
+    let name, age, status;
+
+    [a, b, c].forEach(param => {
+    if (typeof param === "string") name = param;
+    else if (typeof param === "number") age = param;
+    else if (typeof param === "boolean") status = param;
+    });
+
+    console.log(
+    `Hello ${name}, Your Age Is ${age}, You Are ${status ? "" : "Not "}Available For Hire`
+    );
+}
+
+showDetails("Osama", 38, true);   // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+showDetails("Osama", 38, false);  // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
+showDetails(38, "Osama", true);   // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+showDetails(true, 38, "Osama");   // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+showDetails(false, "Osama", 38);  // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
+
+////////////////////////////////////////////////////////////////
+
+function addOne(num) {
+    return num + 1;
+}
+const arr = [1, 2, 3, 4, 5];
+const mappedArr = arr.map(addOne);
+console.log(mappedArr);
+//console.log(arr) // Outputs the Original Array: [1, 2, 3, 4, 5]
+
+///////////////////////////////////////////////////////////////
+
+function isOdd(num) {
+    return num % 2 !== 0;
+}
+const array = [1, 2, 3, 4, 5];
+const oddNums = array.filter(isOdd);
+console.log(oddNums); // Outputs [1, 3, 5];
+// console.log(array);  // Outputs [1, 2, 3, 4, 5], original array is not affected
