@@ -164,65 +164,99 @@
 
 ///////////////////////////////////////////////////
 
-function showInfo (user = "Un", age = "Un", rate = 0, show = "no", ...skills){
-    document.write(`<div>`);
-    document.write(`<h2>Welcome, ${user}</h2>`);
-    document.write(`<P>Age: ${age}</P>`);
-    document.write(`<p>Hour Rate: $${rate}</p>`)
-    document.write('</div>');
-    if (show === "yes"){
-        if (skills.length > 0) {
-            document.write(`<P>skills: ${skills.join(" | ")}</P>`);
-        } else {
-            document.write(`<P>skills: no skills</P>`);
-        }
-    } else {
-        document.write(`<P>skills is hidden</P>`);
-    }
-}
+// function showInfo (user = "Un", age = "Un", rate = 0, show = "no", ...skills){
+//     document.write(`<div>`);
+//     document.write(`<h2>Welcome, ${user}</h2>`);
+//     document.write(`<P>Age: ${age}</P>`);
+//     document.write(`<p>Hour Rate: $${rate}</p>`)
+//     document.write('</div>');
+//     if (show === "yes"){
+//         if (skills.length > 0) {
+//             document.write(`<P>skills: ${skills.join(" | ")}</P>`);
+//         } else {
+//             document.write(`<P>skills: no skills</P>`);
+//         }
+//     } else {
+//         document.write(`<P>skills is hidden</P>`);
+//     }
+// }
 
-showInfo("Rana", 17, 20, "yes", "HTML", "CSS");
+// showInfo("Rana", 17, 20, "yes", "HTML", "CSS");
 
 //??????
 
 //////////////////////////////////////////////////////////////
 
-function showDetails(a, b, c) {
-    let name, age, status;
+// function showDetails(a, b, c) {
+//     let name, age, status;
 
-    [a, b, c].forEach(param => {
-    if (typeof param === "string") name = param;
-    else if (typeof param === "number") age = param;
-    else if (typeof param === "boolean") status = param;
-    });
+//     [a, b, c].forEach(param => {
+//     if (typeof param === "string") name = param;
+//     else if (typeof param === "number") age = param;
+//     else if (typeof param === "boolean") status = param;
+//     });
 
-    console.log(
-    `Hello ${name}, Your Age Is ${age}, You Are ${status ? "" : "Not "}Available For Hire`
-    );
-}
+//     console.log(
+//     `Hello ${name}, Your Age Is ${age}, You Are ${status ? "" : "Not "}Available For Hire`
+//     );
+// }
 
-showDetails("Osama", 38, true);   // "Hello Osama, Your Age Is 38, You Are Available For Hire"
-showDetails("Osama", 38, false);  // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
-showDetails(38, "Osama", true);   // "Hello Osama, Your Age Is 38, You Are Available For Hire"
-showDetails(true, 38, "Osama");   // "Hello Osama, Your Age Is 38, You Are Available For Hire"
-showDetails(false, "Osama", 38);  // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
+// showDetails("Osama", 38, true);   // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+// showDetails("Osama", 38, false);  // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
+// showDetails(38, "Osama", true);   // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+// showDetails(true, 38, "Osama");   // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+// showDetails(false, "Osama", 38);  // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
 
 ////////////////////////////////////////////////////////////////
 
-function addOne(num) {
-    return num + 1;
-}
-const arr = [1, 2, 3, 4, 5];
-const mappedArr = arr.map(addOne);
-console.log(mappedArr);
+// function addOne(num) {
+//     return num + 1;
+// }
+// const arr = [1, 2, 3, 4, 5];
+// const mappedArr = arr.map(addOne);
+// console.log(mappedArr);
 //console.log(arr) // Outputs the Original Array: [1, 2, 3, 4, 5]
 
 ///////////////////////////////////////////////////////////////
 
-function isOdd(num) {
-    return num % 2 !== 0;
-}
-const array = [1, 2, 3, 4, 5];
-const oddNums = array.filter(isOdd);
-console.log(oddNums); // Outputs [1, 3, 5];
+// function isOdd(num) {
+//     return num % 2 !== 0;
+// }
+// const array = [1, 2, 3, 4, 5];
+// const oddNums = array.filter(isOdd);
+// console.log(oddNums); // Outputs [1, 3, 5];
 // console.log(array);  // Outputs [1, 2, 3, 4, 5], original array is not affected
+
+////////////////////////////////////////////////////////////////
+
+let username;
+let age;
+
+document.getElementById("submit").onclick = function() {
+    username = document.getElementById("myUser").value;
+    document.getElementById("myH1").textContent = `Hello ${username}`
+    age = document.getElementById("myAge").value;
+    age = Number(age);
+    console.log(username,age);
+}
+
+const decreaseBtn = document.getElementById("decreaseBtn");
+const resetBtn = document.getElementById("resetBtn");
+const increaseBtn = document.getElementById("increaseBtn");
+const countLabel = document.getElementById("countLabel");
+let count = 0;
+
+increaseBtn.onclick = function() {
+    count++;
+    countLabel.textContent = count;
+}
+
+decreaseBtn.onclick = function() {
+    count--;
+    countLabel.textContent = count;
+}
+
+resetBtn.onclick = function() {
+    count= 0;
+    countLabel.textContent = count;
+}
