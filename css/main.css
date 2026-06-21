@@ -1,5 +1,9 @@
 * {
-    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    font-family: Arial, Helvetica, sans-serif,;
+}
+
+body {
+    font-size: 25px;
 }
 
 #textLabel {
@@ -8,9 +12,11 @@
 }
 
 #submit {
+    font-size: 1em;
     width: 100px;
-    height: 30px;
+    height: 35px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 #submit:hover  {
@@ -36,4 +42,27 @@
 }
 .buttons:hover{
     background-color: #4747af;
+}
+
+#myBtn {
+    padding: 10px 20px;
+    font-size: 3em;
+    padding: 5px 25px;
+    border-radius: 5px;
+}
+
+.myLabels {
+    font-size: 3em;
+}
+
+#mySubmit {
+    font-size: 1em;
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#mySubmit:hover  {
+    background-color: #e24444;
 }

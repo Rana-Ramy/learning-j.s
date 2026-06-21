@@ -177,7 +177,7 @@
 //             document.write(`<P>skills: no skills</P>`);
 //         }
 //     } else {
-//         document.write(`<P>skills is hidden</P>`);
+//         document.write(`<P>skills are hidden</P>`);
 //     }
 // }
 
@@ -260,3 +260,58 @@ resetBtn.onclick = function() {
     count= 0;
     countLabel.textContent = count;
 }
+
+const myBtn = document.getElementById("myBtn");
+const label1 = document.getElementById("label1");
+const label2 = document.getElementById("label2");
+const label3 = document.getElementById("label3");
+const min = 1;
+const max = 6;
+let randomNum1;
+let randomNum2;
+
+myBtn.onclick = function() {
+    randomNum1 = Math.floor(Math.random() * max ) + min;
+    randomNum2 = Math.floor(Math.random() * max ) + min;
+    randomNum3 = Math.floor(Math.random() * max ) + min;
+    label1.textContent = randomNum1;
+    label2.textContent = randomNum2;
+}
+
+const myCheckbox = document.getElementById("myCheckbox");
+const visaBtn = document.getElementById("visaBtn");
+const masterCardBtn =document.getElementById("masterCardBtn");
+const payPalBtn = document.getElementById("payPalBtn");
+const mySubmit = document.getElementById("mySubmit");
+const usResult = document.getElementById("usResult");
+const paymentResult = document.getElementById("paymentResult");
+
+mySubmit.onclick = function() {
+    if(myCheckbox.checked){
+        usResult.textContent = `You understood!`;
+    } else {
+        usResult.textContent = `You did NOT understand`;
+    }
+
+    if(visaBtn.checked) {
+        paymentResult.textContent = `You are paying with Visa`
+    } else if (masterCardBtn.checked) {
+        paymentResult.textContent = `You are paying with Master card `
+    } else if (payPalBtn.checked) {
+        paymentResult.textContent = `You are paying with PayPal`
+    } else {
+        paymentResult.textContent = `You must select a payment method`
+    }
+}
+
+// let userName = "RanaRamy"
+
+// console.log(userName.charAt(0));
+
+const email = "ramyrana504@gmail.com";
+
+let userName = email.slice(0, email.indexOf("@"));
+let extention = email.slice(email.indexOf("@") + 1);
+
+console.log(userName);
+console.log(extention);
