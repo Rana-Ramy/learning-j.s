@@ -240,6 +240,8 @@ document.getElementById("submit").onclick = function() {
     console.log(username,age);
 }
 
+//counter program
+
 const decreaseBtn = document.getElementById("decreaseBtn");
 const resetBtn = document.getElementById("resetBtn");
 const increaseBtn = document.getElementById("increaseBtn");
@@ -261,6 +263,8 @@ resetBtn.onclick = function() {
     countLabel.textContent = count;
 }
 
+//random number generator
+
 const myBtn = document.getElementById("myBtn");
 const label1 = document.getElementById("label1");
 const label2 = document.getElementById("label2");
@@ -273,10 +277,11 @@ let randomNum2;
 myBtn.onclick = function() {
     randomNum1 = Math.floor(Math.random() * max ) + min;
     randomNum2 = Math.floor(Math.random() * max ) + min;
-    randomNum3 = Math.floor(Math.random() * max ) + min;
     label1.textContent = randomNum1;
     label2.textContent = randomNum2;
 }
+
+//checked property practice
 
 const myCheckbox = document.getElementById("myCheckbox");
 const visaBtn = document.getElementById("visaBtn");
@@ -304,14 +309,36 @@ mySubmit.onclick = function() {
     }
 }
 
-// let userName = "RanaRamy"
+//Number guessing game
 
-// console.log(userName.charAt(0));
+const minNum = 1;
+const maxNum = 100;
+const answer = Math.floor(Math.random() * (maxNum - minNum) + 1);
+console.log(answer);
 
-const email = "ramyrana504@gmail.com";
+let attempts = 0;
+let guess;
+let running = true;
 
-let userName = email.slice(0, email.indexOf("@"));
-let extention = email.slice(email.indexOf("@") + 1);
+while(running){
 
-console.log(userName);
-console.log(extention);
+    guess = window.prompt(`Guess a number between ${minNum} - ${maxNum}` );
+    guess = Number(guess);
+
+    if(isNaN(guess)){
+        window.alert(`please enter a valid number`);
+    } else if (guess < minNum || guess > maxNum) {
+        window.alert(`please enter a valid number`);
+    }else{
+        attempts++;
+        if(guess < answer){
+            window.alert("TOO LOW! TRY AGAIN");
+        }
+        else if(guess > answer){
+            window.alert("TOO HIGH! TRY AGAIN");
+    } else {
+        window.alert(`CORRECT! the answer was ${answer}. it took you ${attempts} attempts`);
+            running = false;
+    }
+}
+}
