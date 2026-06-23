@@ -4,6 +4,7 @@
 
 body {
     font-size: 25px;
+    background-color: hsl(0, 0%, 95%);
 }
 
 #textLabel {
@@ -20,7 +21,7 @@ body {
 }
 
 #submit:hover  {
-    background-color: #e24444;
+    background-color: hsl(0, 73%, 58%);
 }
 
 #countLabel {
@@ -34,14 +35,14 @@ body {
 .buttons {
     padding: 10px 20px;
     font-size: 1.5em;
-    font-color: white;
-    background-color: #7b7bc9;
+    font-color: hsl(0, 0%, 100%);
+    background-color: hsl(240, 42%, 64%);
     border-radius: 5px;
     cursor: pointer;
     transition: background-color o.25s;
 }
 .buttons:hover{
-    background-color: #4747af;
+    background-color: hsl(240, 42%, 48%);
 }
 
 #myBtn {
@@ -64,5 +65,46 @@ body {
 }
 
 #mySubmit:hover  {
-    background-color: #e24444;
+    background-color: hsl(0, 73%, 58%);
 }
+
+form {
+    background-color: hsl(0, 0%, 100%);
+    text-align: center;
+    max-width: 350px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px hsl(0, 0%, 0%, 0.3);
+}
+
+#formH1 {
+    color: hsl(232, 78%, 58%);
+}
+
+
+#textBox {
+    width: 50%;
+    text-align: center;
+    font-size: 2em;
+    border: 2px solid hsla(0, 0%, 0%, 0.8);
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.formLabel {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#formButton {
+    margin-top: 15px;
+    font-size: 1em;
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: hsl(0, 73%, 58%);
+} 
+

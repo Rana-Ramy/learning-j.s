@@ -259,7 +259,7 @@ decreaseBtn.onclick = function() {
 }
 
 resetBtn.onclick = function() {
-    count= 0;
+    count = 0;
     countLabel.textContent = count;
 }
 
@@ -311,34 +311,57 @@ mySubmit.onclick = function() {
 
 //Number guessing game
 
-const minNum = 1;
-const maxNum = 100;
-const answer = Math.floor(Math.random() * (maxNum - minNum) + 1);
-console.log(answer);
+// const minNum = 1;
+// const maxNum = 100;
+// const answer = Math.floor(Math.random() * (maxNum - minNum) + 1);
+// console.log(answer);
 
-let attempts = 0;
-let guess;
-let running = true;
+// let attempts = 0;
+// let guess;
+// let running = true;
 
-while(running){
+// while(running){
 
-    guess = window.prompt(`Guess a number between ${minNum} - ${maxNum}` );
-    guess = Number(guess);
+//     guess = window.prompt(`Guess a number between ${minNum} - ${maxNum}` );
+//     guess = Number(guess);
 
-    if(isNaN(guess)){
-        window.alert(`please enter a valid number`);
-    } else if (guess < minNum || guess > maxNum) {
-        window.alert(`please enter a valid number`);
-    }else{
-        attempts++;
-        if(guess < answer){
-            window.alert("TOO LOW! TRY AGAIN");
-        }
-        else if(guess > answer){
-            window.alert("TOO HIGH! TRY AGAIN");
-    } else {
-        window.alert(`CORRECT! the answer was ${answer}. it took you ${attempts} attempts`);
-            running = false;
-    }
-}
+//     if(isNaN(guess)){
+//         window.alert(`please enter a valid number`);
+//     } else if (guess < minNum || guess > maxNum) {
+//         window.alert(`please enter a valid number`);
+//     }else{
+//         attempts++;
+//         if(guess < answer){
+//             window.alert("TOO LOW! TRY AGAIN");
+//         }
+//         else if(guess > answer){
+//             window.alert("TOO HIGH! TRY AGAIN");
+//     } else {
+//         window.alert(`CORRECT! the answer was ${answer}. it took you ${attempts} attempts`);
+//             running = false;
+//     }
+// }
+// }
+
+////////////////////////////////////////////////////////////////
+
+//local variable scopes
+
+// function function1() {
+//     const x = 1;
+//     console.log(x);
+// }
+
+// function function2() {
+//     const x = 2;
+//     console.log(x);
+// }
+
+// function1();
+// function2();
+
+//temprature conversion program
+
+function convert() {
+
 }

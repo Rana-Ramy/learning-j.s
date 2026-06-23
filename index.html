@@ -53,6 +53,22 @@
 
     <p id="usResult"></p>
     <p id="paymentResult"></p>
+
+    <hr>
+
+    <form>
+        <h1 id="formH1">Temprature conversion</h1>
+        <input type="number" id="textBox" value="0"><br>
+
+        <input type="radio" id="toFahrenheit" name="unit">
+        <label for="toFahrenheit" class="formLabel">Celsius → Fahrenheit</label><br>
+
+        <input type="radio" id="toCelsius" name="unit">
+        <label for="toCelsius" class="formLabel"> Fahrenheit → Celsius </label><br>
+
+        <button type="button" id="formButton" onclick="convert()">submit</button>
+        <p id="result">select a unit</p>
+    </form>
 </body>
 <script src="main.js"></script>
 
