@@ -105,6 +105,14 @@ form {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: hsl(0, 73%, 58%);
+    background-color: hsl(0, 73%, 60%);
 } 
 
+#formButton:hover {
+    background-color: hsl(0, 73%, 50%);
+}
+
+#result {
+    font size: 1.75em;
+    font-weight: bold;
+}
