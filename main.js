@@ -417,8 +417,6 @@ function generatePassword(passwordLength, includeLowerCase, includeUpperCase, in
     return password;
 }
 
-
-
 const passwordLength = 12;
 const includeLowerCase = true;
 const includeUpperCase = true;
