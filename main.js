@@ -433,3 +433,32 @@ console.log (`Generated password: ${password}`);
 
 // ?????? understood it but not very well
 
+//////////////////////////////////////////////////////////////////////
+
+let numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(display);
+
+function display(num) {
+    console.log(num);
+}
+
+let fruits = ["apple", "banana", "cherry", "mango"];
+
+fruits.forEach(capitalize);
+fruits.forEach(displayFruit);
+
+function lowercase(element, index, array) {
+    array[index] = element.toLowerCase();
+}
+
+function capitalize(element, index, array) {
+    array[index] = element.charAt(0).toUpperCase() + element.slice(1).toLowerCase();
+}
+
+function displayFruit(element) {
+    console.log(element);
+}
+
+//////////////////////////////////////////////////////////////////////////
+
