@@ -387,78 +387,94 @@ function convert() {
 
 //random password generator
 
-function generatePassword(passwordLength, includeLowerCase, includeUpperCase, includeNumbers, includeSymbols) {
+// function generatePassword(passwordLength, includeLowerCase, includeUpperCase, includeNumbers, includeSymbols) {
     
-    const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
-    const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const numberChars = "123456789";
-    const symbolChars = "!@#$%^&*_+-";
+//     const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+//     const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//     const numberChars = "123456789";
+//     const symbolChars = "!@#$%^&*_+-";
 
-    let allowedChars = "";
-    let password = "";
+//     let allowedChars = "";
+//     let password = "";
 
-    allowedChars += includeLowerCase ? lowercaseChars : "";
-    allowedChars += includeUpperCase ? uppercaseChars : "";
-    allowedChars += includeNumbers ? numberChars : "";
-    allowedChars += includeSymbols ? symbolChars : "";
+//     allowedChars += includeLowerCase ? lowercaseChars : "";
+//     allowedChars += includeUpperCase ? uppercaseChars : "";
+//     allowedChars += includeNumbers ? numberChars : "";
+//     allowedChars += includeSymbols ? symbolChars : "";
     
-    if (passwordLength <= 0) {  
-        return `(password length must be at least 1)`
-    }
-    if(allowedChars.length === 0) {
-        return `(At least one set of chars needs to be selected)`
-    }
+//     if (passwordLength <= 0) {  
+//         return `(password length must be at least 1)`
+//     }
+//     if(allowedChars.length === 0) {
+//         return `(At least one set of chars needs to be selected)`
+//     }
 
-    for (let i = 0; i < passwordLength; i++) {
-        const randomIndex = Math.floor(Math.random() * allowedChars.length);
-        password += allowedChars[randomIndex]
-    }
+//     for (let i = 0; i < passwordLength; i++) {
+//         const randomIndex = Math.floor(Math.random() * allowedChars.length);
+//         password += allowedChars[randomIndex]
+//     }
 
-    return password;
-}
+//     return password;
+// }
 
-const passwordLength = 12;
-const includeLowerCase = true;
-const includeUpperCase = true;
-const includeNumbers = true;
-const includeSymbols = true;
+// const passwordLength = 12;
+// const includeLowerCase = true;
+// const includeUpperCase = true;
+// const includeNumbers = true;
+// const includeSymbols = true;
 
-const password = generatePassword(passwordLength,
-                                includeLowerCase, 
-                                includeUpperCase, 
-                                includeNumbers, 
-                                includeSymbols);
+// const password = generatePassword(passwordLength,
+//                                 includeLowerCase, 
+//                                 includeUpperCase, 
+//                                 includeNumbers, 
+//                                 includeSymbols);
                                 
-console.log (`Generated password: ${password}`);
+// console.log (`Generated password: ${password}`);
 
 // ?????? understood it but not very well
 
 //////////////////////////////////////////////////////////////////////
 
-let numbers = [1, 2, 3, 4, 5];
+// let numbers = [1, 2, 3, 4, 5];
 
-numbers.forEach(display);
+// numbers.forEach(display);
 
-function display(num) {
-    console.log(num);
-}
+// function display(num) {
+//     console.log(num);
+// }
 
-let fruits = ["apple", "banana", "cherry", "mango"];
+// let fruits = ["apple", "banana", "cherry", "mango"];
 
-fruits.forEach(capitalize);
-fruits.forEach(displayFruit);
+// fruits.forEach(capitalize);
+// fruits.forEach(displayFruit);
 
-function lowercase(element, index, array) {
-    array[index] = element.toLowerCase();
-}
+// function lowercase(element, index, array) {
+//     array[index] = element.toLowerCase();
+// }
 
-function capitalize(element, index, array) {
-    array[index] = element.charAt(0).toUpperCase() + element.slice(1).toLowerCase();
-}
+// function capitalize(element, index, array) {
+//     array[index] = element.charAt(0).toUpperCase() + element.slice(1).toLowerCase();
+// }
 
-function displayFruit(element) {
-    console.log(element);
-}
+// function displayFruit(element) {
+//     console.log(element);
+// }
 
 //////////////////////////////////////////////////////////////////////////
+
+    let numbers = [1, 2, 3, 4, 5, 6, 7];
+    let evenNums = numbers.filter(isEven);
+    let oddNums = numbers.filter(isOdd);
+    console.log(evenNums);
+    console.log(oddNums);
+
+    function isEven(num) {
+        return num % 2 === 0;
+    }
+
+    function isOdd(num) {
+        return num % 2 !== 0;
+    }
+
+/////////////////////////////////////////////////////////////////////////
 
