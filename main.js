@@ -478,3 +478,249 @@ function convert() {
 
 /////////////////////////////////////////////////////////////////////////
 
+const person1 = {
+    firstName: "Rana",
+    lastName: "Ramy",
+    age: 17,
+    sayHello: function() {
+        console.log(`Hello, my name is ${this.firstName} ${this.lastName} and I am ${this.age} years old.`);
+    }
+};
+
+const person2 = {
+    firstName: "Ahmed",
+    lastName: "Ramy",
+    age: 20,
+    sayHello: function() {
+        console.log(`Hello, my name is ${this.firstName} ${this.lastName} and I am ${this.age} years old.`);
+    }
+};
+
+person1.sayHello();
+person2.sayHello(); 
+
+function Car(make, model, year, color) {
+    this.make = make,
+    this.model = model,
+    this.year = year,
+    this.color = color,
+    this.drive = function() {
+        console.log(`you drive the ${this.model}`)
+} 
+}
+const car1 = new Car("porcshe", "911", 2026, "Red");
+const car2 = new Car("ferrari", "812 GTS", 2026, "Blue");
+
+console.log(car1.make);
+console.log(car1.model);
+console.log(car1.year);
+console.log(car1.color);
+car1.drive();
+
+console.log(car2.make);
+console.log(car2.model);
+console.log(car2.year);
+console.log(car2.color);
+car2.drive();
+
+///////////////////////////////////////////////////////////////////////////
+
+class product {
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    displayProduct(){
+        console.log(`Product: ${this.name}`);
+        console.log(`Price: $${this.price}`);
+    }
+
+    calculateTotal(salesTax) {
+        return this.price + (this.price * salesTax);
+    }
+}
+
+const salesTax = 0.05;
+
+const product1 = new product("Shirt", 19.99);
+const total = product1.calculateTotal(salesTax);
+const product2 = new product("Pants", 29.50);
+const total2 = product2.calculateTotal(salesTax);
+const product3 = new product("Shoes", 100.00);
+const total3 = product3.calculateTotal(salesTax);
+
+product1.displayProduct();
+console.log(`Total Price with Tax: $${total.toFixed(2)}`);
+product2.displayProduct();
+console.log(`Total Price with Tax: $${total2.toFixed(2)}`);
+product3.displayProduct();
+console.log(`Total Price with Tax: $${total3.toFixed(2)}`);
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+class User{
+    static userCount = 0;
+
+    constructor(username) {
+        this.username = username;
+        User.userCount++;
+    }
+
+    static getUserCount() {
+        console.log(`There are ${User.userCount} users online.`);
+    }
+
+    sayHello() {
+        console.log(`Hello, my username is ${this.username}`);
+    }
+}
+
+const user1 = new User("Rana"); 
+const user2 = new User("Ahmed");
+const user3 = new User("Sandy");
+
+user1.sayHello();
+user2.sayHello();
+user3.sayHello();
+User.getUserCount();
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+class Animal {
+    alive = true;
+
+    eat() {
+        console.log(`The ${this.name} is eating.`);
+    }
+
+    sleep() {
+        console.log(`The ${this.name} is sleeping.`);
+    }
+}   
+
+class Rabbit extends Animal {
+    name = "Rabbit";
+    alive = false;
+    run() {
+        console.log(`The ${this.name} is running.`);
+    }
+}
+
+class Fish extends Animal {
+    name = "Fish";
+    swim() {
+        console.log(`The ${this.name} is swimming.`);
+    }
+}
+
+class Hawk extends Animal {
+    name = "Hawk";
+    fly() {
+        console.log(`The ${this.name} is flying.`);
+    }
+}
+
+const rabbit = new Rabbit();
+const fish = new Fish();
+const hawk = new Hawk();
+
+console.log(rabbit.alive);
+
+rabbit.eat();
+rabbit.sleep();
+rabbit.run();
+
+fish.eat();
+fish.sleep();
+fish.swim();
+
+hawk.eat();
+hawk.sleep();
+hawk.fly();
+
+////////////////////////////////////////////////////////////////////////////
+
+class Rectangle {
+
+    constructor(width, height) {
+        this.width = width;
+        this.height = height;
+    }
+
+        set width(newWidth) {
+        if (newWidth > 0) {
+            this._width = newWidth;
+        } else {
+            console.error("Width must be a positive number.");
+        }   
+    }
+
+        set height(newHeight) {
+        if (newHeight > 0) {
+            this._height = newHeight;
+        } else {
+            console.error("Height must be a positive number.");
+        }
+    } 
+
+        get width() {
+        return `${this._width.toFixed(1)}cm`;
+    }
+
+        get height() {
+        return `${this._height.toFixed(1)}cm`;
+    }
+
+    get area() {
+        return `${(this._width * this._height).toFixed(1)}cm²`;
+    }
+
+}
+
+const rectangle = new Rectangle(3, 4);
+
+console.log(rectangle.width);
+console.log(rectangle.height);
+console.log(rectangle.area);
+
+//////////////////////////////////////////////////////////////////////////////
+
+class Person {
+
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    set firstName(newFirstName) {
+        if (typeof newFirstName === "string" && newFirstName.length > 0) {
+            this._firstName = newFirstName;
+        }
+        else {
+            console.error("First name must be a non-empty string.");
+        }
+    }
+
+    set lastName(newLastName) {
+        if (typeof newLastName === "string" && newLastName.length > 0) {
+            this._lastName = newLastName;
+        }
+        else {
+            console.error("Last name must be a non-empty string.");
+        }
+    }
+
+    get firstName() {
+        return this._firstName;
+    }
+
+    get lastName() {
+        return this._lastName;
+    }
+}
+
+const person = new Person("Rana", "Ramy");
+
+console.log(person.firstName);
+console.log(person.lastName);
