@@ -724,3 +724,39 @@ const person = new Person("Rana", "Ramy");
 
 console.log(person.firstName);
 console.log(person.lastName);
+
+///////////////////////////////////////////////////////////////////////////////
+
+const fruits = [{name: "apple", color: "red", calories: 52},
+                {name: "banana", color: "yellow", calories: 106},
+                {name: "orange", color: "orange", calories: 47},
+                {name: "grape", color: "purple", calories: 122},
+                {name: "pineapple", color: "yellow", calories: 37}];
+
+
+const fruitNames = fruits.map(fruit => fruit.name);
+const fruitColors = fruits.map(fruit => fruit.color);
+const fruitCalories = fruits.map(fruit => fruit.calories);
+
+console.log(fruitNames);
+console.log(fruitColors);
+console.log(fruitCalories);
+
+const yellowFruits = fruits.filter(fruit => fruit.color === "yellow");
+console.log(yellowFruits);
+
+const lowCalorieFruits = fruits.filter(fruit => fruit.calories < 100);
+console.log(lowCalorieFruits);
+
+const highCalorieFruits = fruits.filter(fruit => fruit.calories > 100);
+console.log(highCalorieFruits);
+
+const maxCalorieFruit = fruits.reduce((max, fruit) => 
+                                    fruit.calories > max.calories ? 
+                                    fruit : max);
+console.log(maxCalorieFruit);
+
+const minCalorieFruit = fruits.reduce((min, fruit) => 
+                                    fruit.calories < min.calories ? 
+                                    fruit : min);
+console.log(minCalorieFruit);
