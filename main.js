@@ -462,19 +462,19 @@ function convert() {
 
 //////////////////////////////////////////////////////////////////////////
 
-    let numbers = [1, 2, 3, 4, 5, 6, 7];
-    let evenNums = numbers.filter(isEven);
-    let oddNums = numbers.filter(isOdd);
-    console.log(evenNums);
-    console.log(oddNums);
+    // let numbers = [1, 2, 3, 4, 5, 6, 7];
+    // let evenNums = numbers.filter(isEven);
+    // let oddNums = numbers.filter(isOdd);
+    // console.log(evenNums);
+    // console.log(oddNums);
 
-    function isEven(num) {
-        return num % 2 === 0;
-    }
+    // function isEven(num) {
+    //     return num % 2 === 0;
+    // }
 
-    function isOdd(num) {
-        return num % 2 !== 0;
-    }
+    // function isOdd(num) {
+    //     return num % 2 !== 0;
+    // }
 
 /////////////////////////////////////////////////////////////////////////
 
@@ -727,36 +727,61 @@ console.log(person.lastName);
 
 ///////////////////////////////////////////////////////////////////////////////
 
-const fruits = [{name: "apple", color: "red", calories: 52},
-                {name: "banana", color: "yellow", calories: 106},
-                {name: "orange", color: "orange", calories: 47},
-                {name: "grape", color: "purple", calories: 122},
-                {name: "pineapple", color: "yellow", calories: 37}];
+// const fruits = [{name: "apple", color: "red", calories: 52},
+//                 {name: "banana", color: "yellow", calories: 106},
+//                 {name: "orange", color: "orange", calories: 47},
+//                 {name: "grape", color: "purple", calories: 122},
+//                 {name: "pineapple", color: "yellow", calories: 37}];
 
 
-const fruitNames = fruits.map(fruit => fruit.name);
-const fruitColors = fruits.map(fruit => fruit.color);
-const fruitCalories = fruits.map(fruit => fruit.calories);
+// const fruitNames = fruits.map(fruit => fruit.name);
+// const fruitColors = fruits.map(fruit => fruit.color);
+// const fruitCalories = fruits.map(fruit => fruit.calories);
 
-console.log(fruitNames);
-console.log(fruitColors);
-console.log(fruitCalories);
+// console.log(fruitNames);
+// console.log(fruitColors);
+// console.log(fruitCalories);
 
-const yellowFruits = fruits.filter(fruit => fruit.color === "yellow");
-console.log(yellowFruits);
+// const yellowFruits = fruits.filter(fruit => fruit.color === "yellow");
+// console.log(yellowFruits);
 
-const lowCalorieFruits = fruits.filter(fruit => fruit.calories < 100);
-console.log(lowCalorieFruits);
+// const lowCalorieFruits = fruits.filter(fruit => fruit.calories < 100);
+// console.log(lowCalorieFruits);
 
-const highCalorieFruits = fruits.filter(fruit => fruit.calories > 100);
-console.log(highCalorieFruits);
+// const highCalorieFruits = fruits.filter(fruit => fruit.calories > 100);
+// console.log(highCalorieFruits);
 
-const maxCalorieFruit = fruits.reduce((max, fruit) => 
-                                    fruit.calories > max.calories ? 
-                                    fruit : max);
-console.log(maxCalorieFruit);
+// const maxCalorieFruit = fruits.reduce((max, fruit) => 
+//                                     fruit.calories > max.calories ? 
+//                                     fruit : max);
+// console.log(maxCalorieFruit);
 
-const minCalorieFruit = fruits.reduce((min, fruit) => 
-                                    fruit.calories < min.calories ? 
-                                    fruit : min);
-console.log(minCalorieFruit);
+// const minCalorieFruit = fruits.reduce((min, fruit) => 
+//                                     fruit.calories < min.calories ? 
+//                                     fruit : min);
+// console.log(minCalorieFruit);
+
+/////////////////////////////////////////////////////////////////////////////////
+
+let numbers = [1, 10, 2, 9, 3, 8, 4, 7, 5, 6];
+
+numbers.sort((a, b) => a - b); 
+
+console.log(numbers);   
+
+//////////////////////////////////////////////////////////////////////////////////
+
+let score = 0;
+
+function increaseScore(points) {
+    score += points;
+    console.log(`+${points}pts`);
+}
+
+function decreaseScore(points) {
+    score -= points;
+    console.log(`-${points}pts`);
+}
+
+increaseScore(10);
+decreaseScore(5);
