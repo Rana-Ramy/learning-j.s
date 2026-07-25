@@ -5,6 +5,7 @@
 body {
     font-size: 25px;
     background-color: hsl(0, 0%, 95%);
+    margin: 0; 
 }
 
 #textLabel {
@@ -14,6 +15,7 @@ body {
 
 #submit {
     font-size: 1em;
+    margin-left: 10px;
     width: 100px;
     height: 35px;
     border-radius: 5px;
@@ -58,6 +60,7 @@ body {
 
 #mySubmit {
     font-size: 1em;
+    margin-left: 10px;
     width: 100px;
     height: 35px;
     border-radius: 5px;
@@ -119,4 +122,48 @@ form {
 #result {
     font-size : 1.75em;
     font-weight: bold;
+}
+
+#clock-contanier {
+    background-image: url(200.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#clock {
+    font-size: 6.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: whitesmoke;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    background-color: hsl(0, 0%, 100%, 0.1);
+}
+
+#center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 90%);
+}
+
+#stopWatchH1 {
+    font-size: 4rem;
+    color: hsl(0, 0%, 25%);
+}
+
+#contanier{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border: 5px solid;
+    border-radius: 50px;
 }
