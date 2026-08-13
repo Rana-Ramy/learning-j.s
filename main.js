@@ -816,37 +816,46 @@ function updateClock(){
 updateClock();
 setInterval(updateClock, 1000);
 
-////////////////////////////////////////////////////////////////////////////////
-
-import {PI, getCircumference, getArea} from "./mathUtil.js";
-
-console.log(`The value of PI is: ${PI}`);
-
-const circumference = getCircumference(10);
-console.log(`The circumference of a circle with radius 10 is: ${circumference.toFixed(2)}`);
-
-const area = getArea(10);
-console.log(`The area of a circle with radius 10 is: ${area.toFixed(2)}`);
-
 ///////////////////////////////////////////////////////////////////////////////
 
-try {
-    const dividend = Number(window.prompt("Enter the dividend:"));
-    const divisor = Number(window.prompt("Enter the divisor:"));
+// try {
+//     const dividend = Number(window.prompt("Enter the dividend:"));
+//     const divisor = Number(window.prompt("Enter the divisor:"));
 
-    if(divisor === 0) {
-        throw new Error("Divisor cannot be zero.");
-    }
+//     if(divisor === 0) {
+//         throw new Error("Divisor cannot be zero.");
+//     }
 
-    if (isNaN(dividend) || isNaN(divisor)) {
-        throw new Error("Both dividend and divisor must be valid numbers.");
-    }
+//     if (isNaN(dividend) || isNaN(divisor)) {
+//         throw new Error("Both dividend and divisor must be valid numbers.");
+//     }
 
-    const result = dividend / divisor;
-    console.log(`The result of ${dividend} divided by ${divisor} is: ${result}`);
+//     const result = dividend / divisor;
+//     console.log(`The result of ${dividend} divided by ${divisor} is: ${result}`);
+// }
+// catch (error) {
+//     console.error(error);
+// }
+
+// console.log("You've reached the end of the program");
+
+///////////////////////////////////////////////////////////////////////////////////
+
+const display = document.getElementById("display");
+
+function appendToDisplay(input) {
+    display.value += input;
 }
-catch (error) {
-    console.error(error);
+
+function clearDisplay() {
+    display.value = "";
 }
 
-console.log("You've reached the end of the program");
+function calculate() {
+    try {   
+    display.value = eval(display.value);
+}
+    catch (error) {
+        display.value = "Error";
+    }
+}
