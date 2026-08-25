@@ -859,3 +859,26 @@ function calculate() {
         display.value = "Error";
     }
 }
+
+///////////////////////////////////////////////////////////////////////////////
+
+// const newH1 = document.createElement("h1");
+// newH1.textContent = "Hello, World!";
+// newH1.id = "myH1";
+// newH1.style.color = "blue";
+// newH1.style.textAlign = "center";
+// document.body.append(newH1);
+// // const box2 = document.getElementById("box2");
+// // document.body.insertBefore(newH1, box2); 
+// // const boxes = document.querySelectorAll(".box");
+// // document.body.insertBefore(newH1, boxes[1]); // => a better way to do the same thing as the two lines of code above it
+// document.body.removeChild(newH1);
+
+////////////////////////////////////////////////////////////////////////////////////
+
+const mybox = document.getElementById("myBox");
+
+mybox.addEventListener("click", event => {
+    event.target.style.backgroundColor = "tomato";
+    event.target.textContent = "Clicked!🤩";
+});
