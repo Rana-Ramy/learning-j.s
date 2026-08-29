@@ -877,8 +877,65 @@ function calculate() {
 ////////////////////////////////////////////////////////////////////////////////////
 
 const mybox = document.getElementById("myBox");
+const myButton = document.getElementById("clickButton");
 
-mybox.addEventListener("click", event => {
-    event.target.style.backgroundColor = "tomato";
-    event.target.textContent = "Clicked!🤩";
+myButton.addEventListener("click", event => {
+    mybox.style.backgroundColor = "tomato";
+    mybox.textContent = "Clicked!🤩";
 });
+
+myButton.addEventListener("mouseover", event => {
+    mybox.style.backgroundColor = "yellow";
+    mybox.textContent = "don't do it!😲";
+});
+
+myButton.addEventListener("mouseout", event => {
+    mybox.style.backgroundColor = "hsl(195, 79%, 60%)";
+    mybox.textContent = "Click Me😃";
+});
+
+//////////////////////////////////////////////////////////////////////////////////
+
+const myDiv = document.getElementById("myDiv");
+const moveAmount = 10;
+let positionX = 0;
+let positionY = 0;
+
+document.addEventListener("keydown", event => {
+    myDiv.textContent = "🫡"
+    myDiv.style.backgroundColor = "tomato"
+})
+
+document.addEventListener("keyup", event => {
+    myDiv.textContent = "🙂"
+    myDiv.style.backgroundColor = "hsl(195, 79%, 60%)"
+})
+
+document.addEventListener("keydown", event => {
+
+    if(event.key.startsWith("Arrow")) {
+        
+        event.preventDefault(); // Prevents the default behavior of arrow keys (scrolling)
+
+        switch(event.key) {
+            case "ArrowUp":
+                positionY -= moveAmount;
+                break;
+            case "ArrowDown":
+                positionY += moveAmount;
+                break;
+            case "ArrowLeft":
+                positionX -= moveAmount;
+                break;
+            case "ArrowRight":
+                positionX += moveAmount;
+                break;
+        }
+
+        myDiv.style.top = `${positionY}px`;
+        myDiv.style.left = `${positionX}px`;
+    }
+})
+
+
+
